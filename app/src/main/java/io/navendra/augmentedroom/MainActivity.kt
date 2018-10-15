@@ -13,6 +13,9 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var arFragment : ArFragment
+    private var pointerDrawable = PointDrawable()
+    private var isTracking = false
+    private var isHitting = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
+    }
+
+    fun onUpdate(){
+        
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
